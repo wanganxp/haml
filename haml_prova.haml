@@ -1,0 +1,26 @@
+-#prova con haml
+-#ogni tipo di elemento va preceduto dal simbolo %, gli elementi non hanno bisogno di chiusura
+-#l'indentazione è importanza, ogni sottolivello è un tab avanti
+%html
+	%head
+		-#i valori degli elementi vanno messi subito dopo la dichiarzione dell'elemento
+		-#in questio caso il valore del titolo è 'Prova Titolo'
+		%title Prova titolo
+	%body
+		-#tutti gli attributi degli elementi vanno messi subito dopo la dichiarazione dell'elemento, prima dell'eventuale valore
+		-#vanno inseriti all'interno di parentesi graffe in stile array
+		-#in questo caso viene impostato il colore a rosso e le dimensioni a 10px
+		%strong{:color => 'red', :size => '10px'} Prova strong
+
+		-#i div non hanno bisogno di essere dichiarati, sono l'elemento di default
+		#div_prova
+			Prova div\a capo
+			%ul
+				%li Primo li
+				%li Secondo li
+
+		-# id e classe sono attributi particolari e possono essere dichiarti rispettivamente con i simboli # e ., subito dopo la dichiarazione dell'elemento
+		/commento html
+		%input#input_prova.classe_prova{:type => 'text', :value => 'Contenuto text'}
+
+		-#per andare a capo si usa il simoblo \, si usa anche per chiudere un elemento
